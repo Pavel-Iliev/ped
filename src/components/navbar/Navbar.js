@@ -1,9 +1,9 @@
 import './Navbar.css';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import homeLogo from '../../assests/home.svg';
 import calendarLogo from '../../assests/calendar.svg';
 import infoLogo from '../../assests/bell.svg';
-import user from '../../assests/bell.svg';
+import user from '../../assests/user.jpg';
 
 function Navbar() {
   return(
@@ -13,24 +13,24 @@ function Navbar() {
           <div className="navbar__menu">
             <ul>
               <li>
-                <Link to="/">
+                <NavLink to="/" exact={true} activeClassName="selected">
                   <img src={homeLogo} alt="Home Logo" />
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/calendar">
+                <NavLink to="/calendar" activeClassName="selected">
                   <img src={calendarLogo} alt="Calendar Logo" />
-                </Link>
+                </NavLink>
                 </li>
               <li>
-                <Link to="/info">
+                <NavLink to="/info" activeClassName="selected">
                   <img src={infoLogo} alt="Info Logo" />
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <div className="navbar__user">
               <div className="navbar__user--image">
-
+                <img src={user} alt="User img" />
               </div>
             </div>
           </div>
