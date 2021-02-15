@@ -1,0 +1,27 @@
+.separator-image {
+  display: none;
+}
+
+@media(min-width: 768px) {
+  .separator-image {
+    display: block;
+  }
+  .separator__image .container {
+    display: flex;
+  }
+  .separator__image .container .separator__image--text {
+    flex: 50% 1;
+    position: relative;
+  }
+  .separator__image .container .separator__image--text:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #013066;
+    height: 100%;
+    transform: skew(15deg);
+  } 
+}

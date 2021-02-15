@@ -1,0 +1,145 @@
+.home-header__card--image {
+  position: relative;
+  height: 0;
+  padding-top: 70%;
+}
+
+.home-header__card--info {
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,.08);
+  padding: 0 15px 15px;
+}
+
+.home-header__card--info h3 {
+  position: relative;
+  padding: 15px;
+  transform: translateY(-50%);
+  z-index: 2;
+  overflow: hidden;
+  font-size: 16px;
+  margin-left: -15px;
+}
+
+.home-header__card--info h3 img {
+  position: absolute;
+  top: 50%;
+  right: calc(10% + 40px);
+  transform: translateY(-50%);
+  z-index: 1;
+  height: 14px;
+}
+
+.home-header__card--info h3:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 90%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #D3DF5D;
+  z-index: -1;
+  transform: skew(20deg) translate(-15px);
+}
+
+.home-header__card--info-day {
+  display: block;
+  margin: -10px 0 10px;
+}
+
+.home-header__card--clock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-header__card--clock ul {
+  display: flex;
+}
+
+.home-header__card--clock ul li {
+  margin-right: 10px;
+}
+
+.home-header__card--clock ul li:nth-child(2) {
+  opacity: .5;
+}
+
+.home-header__card--clock span {
+  display: flex;
+  opacity: .5;
+  align-items: center;
+}
+
+.home-header__card--clock span img {
+  height: 15px;
+  margin-right: 5px;
+}
+
+.home-header__card--place-room {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-header__card--place-room span {
+  display: block;
+  opacity: .5;
+}
+
+@media(min-width: 768px) {
+  .home-header__card {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .home-header__card--image {
+    position: relative;
+    padding-top: 0;
+    height: 0;
+    flex: 40% 1;
+    padding-top: 40%;
+  }
+  .home-header__card--info {
+    flex: 60%;
+    font-size: 12px;
+    line-height: 1em;
+    position: relative;
+  }
+  .home-header__card--info h3 {
+    transform: translateY(0);
+    padding: 15px 0;
+    margin: 0;
+  }
+  .home-header__card--info h3:before {
+    display: none;
+  }
+  .home-header__card--info h3 img {
+    right: 0px
+  }
+  .home-header__card--info-day {
+    margin: 0 0 5px;
+  }
+  .home-header__card--place-room span {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+@media(min-width: 992px) { 
+  .home-header__card--info {
+    font-size: 14px;
+  } 
+  .home-header__card--place-room span {
+    font-size: 12px;
+  }
+  .home-header__card--info-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 60px);
+    transform: translate(-50%, -50%);
+  }
+  .home-header__card--info h3 {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+}
