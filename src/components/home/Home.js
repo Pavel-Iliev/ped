@@ -1,9 +1,9 @@
 import './Home.css';
 import calendarLogoYellow from '../../assests/calendar-yellow.svg';
-import PosturalCard from '../posturalCard/PosturalCard';
 import PosturalSlider from '../PosturalSlider';
 import WaitingListCard from '../waitingListCard/WaitingListCard'
 import PosturalCardsDesktop from '../PosturalCardsDesktop';
+import SeparatorImage from '../separatorImage/SeparatorImage';
 
 import React, { useLayoutEffect, useState } from 'react';
 
@@ -45,6 +45,7 @@ function Home() {
           </div>  
         </div>
       </div>
+      <SeparatorImage />
     </>
   ); 
 }
