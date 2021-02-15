@@ -14,7 +14,7 @@ function App() {
 
       <Switch>
         <Route exact={true} path="/">
-            <h1>Home</h1>
+          <Home />
         </Route>
         <Route exact path="/calendar">
             <h1>calendar</h1>

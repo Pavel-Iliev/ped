@@ -1,0 +1,27 @@
+.home-header__card--place-room .title-orange {
+  margin: 0;
+}
+
+@media(max-width: 767px) {
+  .waiting-list-card .home-header__card--image {
+    display: none;
+  }
+  .waiting-list-card .home-header__card--info h3 {
+    transform: translateY(0);
+    margin: 0;
+    padding: 25px 0;
+  }
+  .waiting-list-card .home-header__card--info h3::before {
+    display: none;
+  }
+  .waiting-list-card .home-header__card--place-room {
+    flex-direction: column;
+  }
+  .waiting-list-card .home-header__card--place-room span {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .waiting-list-card .home-header__card--info h3 img {
+    right: 0;
+  }
+}
