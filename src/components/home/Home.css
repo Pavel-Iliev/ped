@@ -32,7 +32,7 @@
   bottom: -30px;
 }
 
-.home-header .swiper-pagination-bullet {
+#root .swiper-pagination-bullet {
   width: 4px;
   height: 4px;
   background-color: #D3DF5D;
@@ -40,7 +40,7 @@
   transition: all .3s;
 }
 
-.home-header .swiper-pagination-bullet.swiper-pagination-bullet-active {
+#root .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 20px;
   border-radius: 4px;
   opacity: 1;
