@@ -5,6 +5,7 @@ import WaitingListCard from '../waitingListCard/WaitingListCard'
 import PosturalCardsDesktop from '../PosturalCardsDesktop';
 import SeparatorImage from '../separatorImage/SeparatorImage';
 import Avvisi from '../avvisi/Avvisi';
+import SeparatorApp from '../separatorImage/SeparatorApp';
 
 import React, { useLayoutEffect, useState } from 'react';
 
@@ -48,6 +49,7 @@ function Home() {
       </div>
       <SeparatorImage />
       <Avvisi />
+      <SeparatorApp />
     </>
   ); 
 }
