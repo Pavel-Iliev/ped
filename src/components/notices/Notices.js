@@ -1,4 +1,4 @@
-import './Avvisi.css';
+import './Notices.css';
 import arrowBlue from '../../assests/arrow-blue.svg';
 import infoLogo from '../../assests/bell.svg';
 import {
@@ -9,7 +9,7 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 
-function Avvisi() {
+function Notices() {
 
   const avvisi = [
     {
@@ -65,4 +65,4 @@ function Avvisi() {
   ); 
 }
 
-export default Avvisi;
+export default Notices;

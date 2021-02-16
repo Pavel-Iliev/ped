@@ -1,0 +1,142 @@
+.header-calendar {
+  padding: 15px 0 15px 45px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-calendar:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #023066;
+  z-index: -1;
+}
+
+[class^="DatePicker_monthYearLabel"] {
+  color: #D3DF5D!important;
+}
+
+[class^="DatePicker_daysContainer"] {
+  background-color: #fff;
+}
+
+[class^="DatePicker_dateDayItem"]:not([style]) {  
+  color: #023066!important;
+  background-color: #fff!important;
+  height: 49px!important;
+}
+
+[class^="DatePicker_dateDayItem"] {
+  background-color: #D3DF5D!important;
+  color: #023066!important;
+  border: 0px!important;
+  border-radius: 0px!important;
+  margin: 0 0 0 0!important;
+  height: 49px!important;
+}
+
+
+[class^="DatePicker_dateLabel"] {
+  font-size: 14px!important;
+}
+
+[class^="DatePicker_monthYearLabel"] {
+  font-size: 12px!important;
+  margin: 0 14px 10px 40px!important;
+}
+
+@media(min-width: 768px) {
+  [class^="DatePicker_daysContainer"] {
+    background-color: transparent!important;
+  }
+  [class^="DatePicker_dateDayItem"]:not([style]) {  
+    color: #fff!important;
+    background-color: transparent!important;
+    width: 85px!important;
+  }
+
+  [class^="DatePicker_dateDayItem"]:not([style]):before {
+    display: none
+  }
+
+  [class^="DatePicker_dateDayItem"] {
+    width: 85px!important;
+    background-color: transparent!important;
+    position: relative;
+  }
+
+  [class^="DatePicker_dateDayItem"]:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skew(15deg);
+    background-color: #D3DF5D;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  [class^="DatePicker_button"] button {
+    opacity: 0;
+  }
+  [class^="DatePicker_buttonWrapper"] {
+    position: relative;
+  }
+  [class^="DatePicker_buttonWrapper"]:after,
+  [class^="DatePicker_buttonWrapper"]:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 8px;
+    height: 2px;
+    background-color: #D3DF5D;
+  }
+  [class^="DatePicker_buttonWrapper"]:first-child:after,
+  [class^="DatePicker_buttonWrapper"]:first-child:before {
+    transform-origin: 0 50%;
+  }
+  [class^="DatePicker_buttonWrapper"]:last-child:after,
+  [class^="DatePicker_buttonWrapper"]:last-child:before {
+    transform-origin: 100% 50%;
+  }
+  [class^="DatePicker_buttonWrapper"]:first-child:after,
+  [class^="DatePicker_buttonWrapper"]:last-child:after {
+    transform: translateX(-50%) rotate(45deg);
+  }
+  [class^="DatePicker_buttonWrapper"]:first-child:before,
+  [class^="DatePicker_buttonWrapper"]:last-child:before {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  [class^="DatePicker_buttonWrapper"]:first-child {
+    transform: translateX(-30px);
+  }
+
+  .header-calendar:before {
+    left: auto;
+    right: -30px;
+    width: calc(100% - 50px);
+    transform: skew(15deg);
+  }
+
+  .header-calendar .container {
+    max-width: 600px;
+  }
+}
+
+@media(max-width: 767px) {
+  [class^="DatePicker_buttonWrapper"] {
+    display: none!important;
+  }
+  .header-calendar .container {
+    margin: 0;
+    padding: 0;
+  }
+}
