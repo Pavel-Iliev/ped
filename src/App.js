@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from "./components/navbar/Navbar";
 import Home from "./components/home/Home";
+import Calendar from "./components/calendar/Calendar";
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,7 +18,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/calendar">
-            <h1>calendar</h1>
+          <Calendar />
         </Route>
         <Route exact path="/avvisi">
           <h1>avvisi</h1>

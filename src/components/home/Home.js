@@ -5,7 +5,7 @@ import PosturalSlider from '../PosturalSlider';
 import WaitingListCard from '../waitingListCard/WaitingListCard';
 import PosturalCardsDesktop from '../PosturalCardsDesktop';
 import SeparatorImage from '../separatorImage/SeparatorImage';
-import Avvisi from '../avvisi/Avvisi';
+import Notices from '../notices/Notices';
 import SeparatorApp from '../separatorImage/SeparatorApp';
 import '../magazine/Magazine.css'
 import MagazineSlider from '../MagazineSlider';
@@ -53,7 +53,7 @@ function Home() {
         </div>
       </div>
       <SeparatorImage />
-      <Avvisi />
+      <Notices />
       <SeparatorApp />
       <div className="magazine">
         <div className="container">
