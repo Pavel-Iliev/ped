@@ -1,0 +1,71 @@
+.magazine__card--image {
+  position: relative;
+  height: 0;
+  padding-top: 70%;
+}
+
+.magazine__card--info {
+  position: relative;
+}
+
+.magazine__card--info h3 {
+  padding: 20px 0;
+}
+
+.magazine__card--info p {
+  margin-bottom: 1em;
+}
+
+.magazine__card--info span {
+  font-size: 11px;
+  color: #909090;
+}
+
+.magazine__card--info-wrap {
+  padding: 15px;
+}
+
+.magazine__card--info-arrow {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 25px;
+}
+
+.magazine__card--info-arrow::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: #D3DF5D;
+  z-index: -1;
+  transform: translate(-50%, -50%) skew(15deg);
+}
+
+.magazine__card--info-arrow img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.magazine {
+  overflow: hidden;
+}
+
+.magazine .swiper-container {
+  overflow: visible;
+  width: 70%;
+  float: left;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+.magazine .swiper-slide {
+  box-shadow:  0 0 10px rgba(0,0,0,.1);
+}

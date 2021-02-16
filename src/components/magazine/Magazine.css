@@ -1,0 +1,43 @@
+.magazine {
+  margin-top: 50px;
+}
+
+.magazine img {
+  margin: 0 10px 0 0;
+}
+
+.magazine .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-magazine__left {
+  display: flex;
+}
+
+.magazine .title span {
+  text-transform: initial;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.magazine__card h3 {
+  text-transform: uppercase;
+}
+
+@media(min-width: 768px) {
+  .magazine .title {
+    margin: 20px 0 30px;
+  }
+  .magazine-card__wrap {
+    display: flex;
+    margin: 0 -10px 60px;
+  }
+  .magazine__card {
+    margin: 0 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  }
+  .magazine__card p {
+    font-size: 14px;
+  }
+}
