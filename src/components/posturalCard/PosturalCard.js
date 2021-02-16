@@ -1,6 +1,6 @@
 import './PosturalCard.css';
 import clock from '../../assests/clock.svg';
-import arrowBlue from '../../assests/arrow-blue.svg'
+import arrowBlue from '../../assests/arrow-blue.svg';
 
 function PosturalCard() {
   return(

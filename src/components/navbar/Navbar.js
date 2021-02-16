@@ -23,7 +23,7 @@ function Navbar() {
                 </NavLink>
                 </li>
               <li>
-                <NavLink to="/info" activeClassName="selected">
+                <NavLink to="/avvisi" activeClassName="selected">
                   <img src={infoLogo} alt="Info Logo" />
                 </NavLink>
               </li>
