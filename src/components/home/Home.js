@@ -10,6 +10,7 @@ import SeparatorApp from '../separatorImage/SeparatorApp';
 import '../magazine/Magazine.css'
 import MagazineSlider from '../MagazineSlider';
 import MagazineCardDesktop from '../MagazineCardsDesktop';
+import Footer from '../footer/Footer';
 
 import React, { useLayoutEffect, useState } from 'react';
 
@@ -54,7 +55,6 @@ function Home() {
       <SeparatorImage />
       <Avvisi />
       <SeparatorApp />
-
       <div className="magazine">
         <div className="container">
             <h2 className="title title-blue">
@@ -70,7 +70,8 @@ function Home() {
                 <MagazineSlider />
             }
         </div>
-      </div>
+      </div>  
+      <Footer />
     </>
   ); 
 }
