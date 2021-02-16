@@ -37,7 +37,7 @@
   .separator__image--text-wrap {
     position: absolute;
     top: 50%;
-    left: 30px;
+    left: 60px;
     transform: translateY(-50%);
   }
   .separator__image--text-wrap p {

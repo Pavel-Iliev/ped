@@ -1,7 +1,7 @@
 .home-header {
   position: relative;
   overflow: hidden;
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .home-header:before {
@@ -37,6 +37,7 @@
   height: 4px;
   background-color: #D3DF5D;
   opacity: .35;
+  transition: all .3s;
 }
 
 .home-header .swiper-pagination-bullet.swiper-pagination-bullet-active {

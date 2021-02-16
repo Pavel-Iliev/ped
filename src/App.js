@@ -19,8 +19,8 @@ function App() {
         <Route exact path="/calendar">
             <h1>calendar</h1>
         </Route>
-        <Route exact path="/info">
-          <h1>info</h1>
+        <Route exact path="/avvisi">
+          <h1>avvisi</h1>
         </Route>
       </Switch>
     </Router>
