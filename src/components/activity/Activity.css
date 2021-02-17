@@ -303,6 +303,9 @@
   .wrap-sizes {
     margin: 0 20px;
   }
+  .filters .filters__wrap--container img.icon-club {
+    margin-left: -280px;
+  }
 }
 
 @media(max-width: 767px) {
