@@ -3,10 +3,15 @@ import './Activity.css';
 import clock from '../../assests/clock.svg';
 import arrow from '../../assests/arrow-blue.svg';
 import filter from '../../assests/filter.svg';
+import Footer from '../footer/Footer';
+
+import clubIcon from '../../assests/club.svg';
+import categoryIcon from '../../assests/category.svg';
+import activityIcon from '../../assests/activity.svg';
 
 function Activity() {
 
-  const activitesDatas = [
+  const activitiesDatas = [
     {
       'title' : 'Hatha Yoga',
       'image' : '/images/yoga.jpg',
@@ -16,6 +21,7 @@ function Activity() {
       'size' : '30',
       'club' : 'ravizza',
       'category' : 'tonifica',
+      'activity' : 'hathaYoga',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -30,6 +36,7 @@ function Activity() {
       'size' : '30',
       'club' : 'ravizza',
       'category' : 'tonifica',
+      'activity' : 'pancaFit',
       'signIn' : false,
       'full' : true,
       'close' : false,
@@ -44,6 +51,7 @@ function Activity() {
       'size' : '30',
       'club' : 'ravizza',
       'category' : 'tonifica',
+      'activity' : 'bodyPump',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -58,6 +66,7 @@ function Activity() {
       'size' : '30',
       'club' : 'ravizza',
       'category' : 'acqua',
+      'activity' : 'playAcqua',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -72,6 +81,7 @@ function Activity() {
       'size' : '30',
       'club' : 'setai',
       'category' : 'tonifica',
+      'activity' : 'hathaYoga',
       'signIn' : false,
       'full' : false,
       'close' : true,
@@ -86,6 +96,7 @@ function Activity() {
       'size' : '30',
       'club' : 'setai',
       'category' : 'tonifica',
+      'activity' : 'pancaFit',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -100,6 +111,7 @@ function Activity() {
       'size' : '30',
       'club' : 'setai',
       'category' : 'tonifica',
+      'activity' : 'bodyPump',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -114,6 +126,7 @@ function Activity() {
       'size' : '30',
       'club' : 'setai',
       'category' : 'acqua',
+      'activity' : 'playAcqua',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -128,6 +141,7 @@ function Activity() {
       'size' : '30',
       'club' : 'ravizza',
       'category' : 'tonifica',
+      'activity' : 'hathaYoga',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -142,6 +156,7 @@ function Activity() {
       'size' : '30',
       'club' : 'ravizza',
       'category' : 'tonifica',
+      'activity' : 'pancaFit',
       'signIn' : false,
       'full' : true,
       'close' : false,
@@ -156,6 +171,7 @@ function Activity() {
       'size' : '30',
       'club' : 'ravizza',
       'category' : 'tonifica',
+      'activity' : 'bodyPump',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -170,6 +186,7 @@ function Activity() {
       'size' : '30',
       'club' : 'ravizza',
       'category' : 'acqua',
+      'activity' : 'playAcqua',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -184,6 +201,7 @@ function Activity() {
       'size' : '30',
       'club' : 'setai',
       'category' : 'tonifica',
+      'activity' : 'hathaYoga',
       'signIn' : false,
       'full' : false,
       'close' : true,
@@ -198,6 +216,7 @@ function Activity() {
       'size' : '30',
       'club' : 'setai',
       'category' : 'tonifica',
+      'activity' : 'pancaFit',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -212,6 +231,7 @@ function Activity() {
       'size' : '30',
       'club' : 'setai',
       'category' : 'tonifica',
+      'activity' : 'bodyPump',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -226,6 +246,7 @@ function Activity() {
       'size' : '30',
       'club' : 'setai',
       'category' : 'acqua',
+      'activity' : 'playAcqua',
       'signIn' : false,
       'full' : false,
       'close' : false,
@@ -233,61 +254,147 @@ function Activity() {
     }
   ]
 
-  const [activites, setActivites] = useState(activitesDatas);
-  const [club, setClub] = useState('');
-  const [category, setCategory] = useState('');
-  const [activity, setActivity] = useState('');
+  const selectors = [
+    {
+      id: 'club',
+      options: [
+        {
+          label: 'Tutti i Club',
+          value: 'all',
+        },
+        {
+          label: 'Club Ravizza',
+          value: 'ravizza',
+        },
+        {
+          label: 'Club Setai',
+          value: 'setai',
+        },
+      ],
+    },
+    {
+      id: 'category',
+      options: [
+        {
+          label: 'Tutte le Categorie',
+          value: 'all',
+        },
+        {
+          label: 'Attività in acqua',
+          value: 'acqua',
+        },
+        {
+          label: 'Cardiovascolari e Tonificanti',
+          value: 'tonifica',
+        },
+      ],
+    },
+    {
+      id: 'activity',
+      options: [
+        {
+          label: 'Tutte le Attività',
+          value: 'all',
+        },
+        {
+          label: 'Play Acqua',
+          value: 'playAcqua',
+        },
+        {
+          label: 'BodyPump',
+          value: 'bodyPump',
+        },
+        {
+          label: 'Pancafit',
+          value: 'pancaFit',
+        },
+        {
+          label: 'Hatha Yoga',
+          value: 'hathaYoga',
+        }
+      ],
+    }
+  ]
 
-  useEffect(()=> {
-    console.log(club, 'club');
-    console.log(category, 'category');
-    console.log(activity, 'activity');
+  const [activities, setActivities] = useState(activitiesDatas);
 
-  },[club, category, activity])
+  const [menuOpen, setMenuOpen] = useState(false)
 
-  function onClubChange(el) {
-    setClub(el.target.value);
+  const [club, setClub] = useState('all');
+  const [category, setCategory] = useState('all');
+  const [activity, setActivity] = useState('all');
+
+  function openMenu () {
+    document.querySelector('.filters').classList.add('open-filters')
+    setMenuOpen(true);
   }
 
-  function onCategoryChange(el) {
-    setCategory(el.target.value);
+  function closeMenu () {
+    document.querySelector('.filters').classList.remove('open-filters')
+    setMenuOpen(false);
   }
 
-  function onActivityChange(el) {
-    setActivity(el.target.value);
-  }
+  useEffect(() => {
+    const activitiesList = activitiesDatas.filter(el => {
+      if (club === 'all') {
+        return true;
+      } 
+      return el.club.includes(club);
+    }).filter(el => {
+      if (category === 'all') {
+        return true;
+      }
+      return el.category.includes(category);
+    }).filter(el => {
+        if (activity === 'all') {
+          return true;
+        }
+        return el.activity.includes(activity);
+      })
+
+    setActivities(activitiesList);
+
+  }, [club, category, activity])  
+
+  const onSelectChange = ({ target }, id) => {
+    const { value } = target;
+    if (id === 'club') {
+      setClub(value);
+    }
+    if (id === 'category') {
+      setCategory(value);
+    }
+    if (id === 'activity') {
+      setActivity(value);
+    }
+  };
 
   return (
     <>
       <div className="filters">
-        <span className="filters__title"><img src={filter} alt="filters" />Filtri</span>
+        <span className="filters__title" onClick={menuOpen ? closeMenu : openMenu}><img src={filter} alt="filters" />Filtri</span>
         <div className="filters__wrap">
-          <select 
-            onChange={onClubChange}
-            className="filter-club"
-          >
-            <option value="all">Tutti i Club</option>
-            <option value="ravizza">Club Ravizza</option>
-            <option value="setai">Club Setai</option>
-          </select>
-          <select 
-            onChange={onCategoryChange}
-            className="filter-category"
-          >
-            <option value="all">Tutte le categorie</option>
-            <option value="acqua">Attività in acqua</option>
-            <option value="tonifica">Cardiovascolari e Tonificanti</option>
-          </select>
-          <select 
-            onChange={onActivityChange}
-            className="filter-activity"
-          >
-            <option value="all">Tutte le attività</option>
-            <option value="Play Acqua">Play Acqua</option>
-            <option value="BodyPump">BodyPump</option>
-            <option value="Pancafit">Pancafit</option>
-            <option value="Hatha Yoga">Hatha Yoga</option>
-          </select>
+          <div className="container">
+            <div className="filters__wrap--container">
+              <img className="icon-club" src={clubIcon} alt="clubs" />
+              <img className="icon-category" src={categoryIcon} alt="category" />
+              <img className="icon-activity" src={activityIcon} alt="activity" />
+              {
+                selectors.map(selector => {
+                  return <select
+                            onChange={(event) => onSelectChange(event, selector.id)}
+                            className={`filter-${selector.id}`}
+                          >
+                          {
+                            selector.options.map(option => {
+                              return <option value={option.value}>{option.label}</option>
+                            })
+                          }
+                        </select>
+                })
+              }
+            </div>
+          </div>
         </div>
       </div>
 
@@ -295,17 +402,17 @@ function Activity() {
         <div className="container">
           <ul>
             {
-              activites.map((el, index) => {
+              activities.map((el, index) => {
                 return <li key={index} className={`${el.category}`}>
-                  <div className="list-activites__image">
+                  <div className="list-activities__image">
                     <img src={el.image} alt={el.title}/>
                   </div>
-                  <div className="list-activites__time-hour">
-                    <div className="list-activites__time-hour-t">
+                  <div className="list-activities__time-hour">
+                    <div className="list-activities__time-hour-t">
                       <span className="title-blue">{el.startTime}</span>
                       <span>{el.endTime}</span>
                     </div>
-                    <div className="list-activites__time-hour-h">
+                    <div className="list-activities__time-hour-h">
                       <img src={clock} alt="clock icon" />
                       <span>{el.min} min</span>
                     </div>
@@ -314,8 +421,8 @@ function Activity() {
                     {el.title}
                     <img src={arrow} alt="arrow"/>
                   </h2>
-                  <div className="list-activites__size-btn">
-                    <div className="list-activites__size-btn-s">
+                  <div className="list-activities__size-btn">
+                    <div className="list-activities__size-btn-s">
                       {
                         el.free ? <p>Attività libera</p>
                         :
@@ -326,7 +433,7 @@ function Activity() {
                         </div>
                       }
                     </div>
-                    <div className="list-activites__size-btn-btn">
+                    <div className="list-activities__size-btn-btn">
                       {
                         el.free ? ''
                         :
@@ -364,6 +471,8 @@ function Activity() {
           </ul>
         </div>
       </div>
+
+      <Footer />
     </>
   )
 }
