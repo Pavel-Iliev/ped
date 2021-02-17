@@ -12,6 +12,7 @@ function Calendar() {
       <HeaderCalendar 
         selectedDay={selectedDay}
       />
+      <Activity />
     </>
   )
 }

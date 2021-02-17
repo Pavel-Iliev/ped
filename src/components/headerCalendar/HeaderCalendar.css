@@ -24,13 +24,18 @@
   background-color: #fff;
 }
 
+[class^="DatePicker_dateDayItem"] {
+  margin: 0!important;
+}
+
 [class^="DatePicker_dateDayItem"]:not([style]) {  
   color: #023066!important;
   background-color: #fff!important;
   height: 49px!important;
+  margin: 0!important;
 }
 
-[class^="DatePicker_dateDayItem"] {
+[class^="DatePicker_dateDayItem"][style]:not([style=""]) {
   background-color: #D3DF5D!important;
   color: #023066!important;
   border: 0px!important;
@@ -67,9 +72,14 @@
     width: 85px!important;
     background-color: transparent!important;
     position: relative;
+    color: #fff!important;
   }
 
-  [class^="DatePicker_dateDayItem"]:before {
+  [class^="DatePicker_dateDayItem"][style]:not([style=""]) {
+    background-color: transparent!important;
+  }
+
+  [class^="DatePicker_dateDayItem"][style]:not([style=""]):before {
     content: '';
     display: block;
     position: absolute;
@@ -138,5 +148,6 @@
   .header-calendar .container {
     margin: 0;
     padding: 0;
+    max-width: 100%;
   }
 }
